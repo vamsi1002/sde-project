@@ -14,6 +14,7 @@ public class AuthController {
     public String login(@RequestParam String username) {
         // VVR CHANGE: Generate JWT token for logged-in user
         // VVR CHANGE: Token is returned to the client
+        // nenu CHANGE: Token is returned to the client
         return JwtUtil.generateToken(username);
     }
 }
