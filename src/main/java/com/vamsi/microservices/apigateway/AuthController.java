@@ -12,9 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class AuthController {
     @PostMapping("/login")
     public String login(@RequestParam String username) {
-        // RAVI CHANGE: Validate username before generating token
-        // RAVI CHANGE: Authentication request received
-
+        // VVR CHANGE: Generate JWT token for logged-in user
+        // VVR CHANGE: Token is returned to the client
         return JwtUtil.generateToken(username);
     }
 }
